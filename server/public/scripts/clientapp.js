@@ -11,12 +11,16 @@ function getMovies() {
     url: '/movies',
     success: function (movies) {
       console.log(movies);
+      $('#movieList').empty();
+      $('#movieList').append('<table></table>')
       movies.forEach(function (movie) {
-        $('#movieList').append('<div>' + movie.title +
-          '|' + movie.year +
-          '|' + movie.genre +
-          '|' + movie.director +
-        '</div>');
+        $('#movieList').find('table').append('<tr><td>' + movie.title +
+          '</td><td>' + movie.year +
+          '</td><td>' + movie.genre +
+          '</td><td>' + movie.director +
+          '</td><td>' + movie.favorite +
+          '</td><td>' + movie.main_actor +
+        '</td></tr>');
       });
     },
   });
@@ -38,7 +42,7 @@ function postMovie() {
     url: '/movies',
     data: movie,
     success: function (data) {
-      console.log('Successful post!');
+      getMovies();
     },
   });
 }

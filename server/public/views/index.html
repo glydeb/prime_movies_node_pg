@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Put that Postgres in that Node</title>
+    <link rel = "stylesheet" href = "/styles/style.css"/>
     <script src="/vendor/jquery.min.js"></script>
     <script src="/scripts/clientapp.js"></script>
   </head>
@@ -20,12 +21,20 @@
       <label for="director">Director:</label>
       <input type="text" id="director" name="director" />
 
+      <label for="favorite">Favorite:</label>
+      <input type="radio" name="favorite" value = "true"/>Yes
+      <input type="radio" name="favorite" value = "false" checked />No
+
+      <label for="mainActor">Main Actor:</label>
+      <input type="text" id="mainActor" name="mainActor" />
+
       <button id="movieSubmit">Go</button>
     </form>
 
     <h1>Movies</h1>
     <div id="movieList">
-      
+      <table>
+      </table>
     </div>
   </body>
 </html>

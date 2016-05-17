@@ -13,5 +13,13 @@
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "pg": "^4.5.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glydeb/prime_movies_node_pg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/glydeb/prime_movies_node_pg/issues"
+  },
+  "homepage": "https://github.com/glydeb/prime_movies_node_pg#readme"
 }

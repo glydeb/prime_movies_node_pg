@@ -27,9 +27,10 @@ router.post('/', function (req, res) {
       res.sendStatus(500);
     }
 
-    client.query('INSERT INTO movies (title, year, genre, director) ' +
-                  'VALUES ($1, $2, $3, $4)',
-                   [movie.title, movie.year, movie.genre, movie.director],
+    client.query('INSERT INTO movies (title, year, genre, director, favorite, main_actor) ' +
+                  'VALUES ($1, $2, $3, $4, $5, $6)',
+                   [movie.title, movie.year, movie.genre, movie.director,
+                    movie.favorite, movie.mainActor],
                  function (err, result) {
                    done();
 
